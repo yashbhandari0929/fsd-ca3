@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ApexInventory | Enterprise Inventory Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>ApexInventory <span>Core</span></h1>
+          <p class="brand-tag">Program 1: Vanilla JS DOM & Fetch Architecture</p>
+        </div>
+      </div>
+
+      <div class="student-badge">
+        <div class="student-avatar">YB</div>
+        <div class="student-info">
+          <div class="student-name">Yash Prasanna Bhandari</div>
+          <div class="student-meta">Roll: <strong>08</strong> &bull; Div: <strong>D11ADA</strong> &bull; Sem V &bull; BE AI-DS</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="dashboard-main">
+    <div class="dashboard-container">
+      
+      <!-- Top Action Bar & Status -->
+      <section class="banner-section">
+        <div class="banner-content">
+          <h2>Enterprise Stock Control & Valuation Dashboard</h2>
+          <p>Real-time client-side inventory state management with DOM manipulation, Fetch API async pipelines, and local persistence.</p>
+        </div>
+        <div class="banner-actions">
+          <button id="btnFetchData" class="btn btn-secondary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Fetch Sample (GET)
+          </button>
+          <button id="btnSimulatePost" class="btn btn-secondary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+            Sync Cloud (POST)
+          </button>
+          <button id="btnOpenAddModal" class="btn btn-primary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add New Item
+          </button>
+        </div>
+      </section>
+
+      <!-- Metrics Cards -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Total Products</span>
+            <span class="stat-icon icon-blue">📦</span>
+          </div>
+          <div class="stat-value" id="statTotalItems">0</div>
+          <div class="stat-subtext" id="statCategoriesCount">0 Active Categories</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Total Inventory Value</span>
+            <span class="stat-icon icon-emerald">💰</span>
+          </div>
+          <div class="stat-value" id="statTotalValue">$0.00</div>
+          <div class="stat-subtext">Sum of (Qty &times; Unit Price)</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Low Stock Warnings</span>
+            <span class="stat-icon icon-amber">⚠️</span>
+          </div>
+          <div class="stat-value text-amber" id="statLowStock">0</div>
+          <div class="stat-subtext">Items &le; safety threshold</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Out of Stock</span>
+            <span class="stat-icon icon-rose">🚫</span>
+          </div>
+          <div class="stat-value text-rose" id="statOutOfStock">0</div>
+          <div class="stat-subtext">Requires immediate restock</div>
+        </div>
+      </section>
+
+      <!-- Filters & Search Toolbar -->
+      <section class="toolbar-card">
+        <div class="toolbar-left">
+          <div class="search-box">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="searchInput" placeholder="Search by name, SKU, or supplier..." />
+          </div>
+
+          <div class="filter-group">
+            <select id="categoryFilter">
+              <option value="ALL">All Categories</option>
+              <!-- Populated dynamically -->
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <select id="stockFilter">
+              <option value="ALL">All Stock Levels</option>
+              <option value="IN_STOCK">In Stock (> Threshold)</option>
+              <option value="LOW_STOCK">Low Stock (≤ Threshold)</option>
+              <option value="OUT_OF_STOCK">Out of Stock (0)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="toolbar-right">
+          <div class="filter-group">
+            <select id="sortBy">
+              <option value="name_asc">Name (A-Z)</option>
+              <option value="name_desc">Name (Z-A)</option>
+              <option value="price_desc">Price (High to Low)</option>
+              <option value="price_asc">Price (Low to High)</option>
+              <option value="qty_desc">Stock Qty (Highest)</option>
+              <option value="qty_asc">Stock Qty (Lowest)</option>
+            </select>
+          </div>
+          <button id="btnExportJson" class="btn btn-outline" title="Export Inventory JSON">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Export JSON
+          </button>
+          <button id="btnResetData" class="btn btn-outline-danger" title="Clear all local items">
+            Reset
+          </button>
+        </div>
+      </section>
+
+      <!-- Inventory Table Container -->
+      <section class="table-card">
+        <div class="table-header-info">
+          <div>
+            <h3 class="table-title">Product Catalog Records</h3>
+            <p class="table-subtitle" id="recordCounter">Showing 0 of 0 items</p>
+          </div>
+          <div class="table-badge-legend">
+            <span class="legend-badge badge-green"><span class="dot"></span> In Stock</span>
+            <span class="legend-badge badge-amber"><span class="dot"></span> Low Stock</span>
+            <span class="legend-badge badge-red"><span class="dot"></span> Out of Stock</span>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="inventory-table">
+            <thead>
+              <tr>
+                <th>SKU</th>
+                <th>Product Description</th>
+                <th>Category</th>
+                <th>Supplier</th>
+                <th class="text-right">Unit Price</th>
+                <th class="text-center">Stock Level</th>
+                <th class="text-right">Total Value</th>
+                <th class="text-center">Status</th>
+                <th class="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="inventoryTableBody">
+              <!-- Dynamically populated rows -->
+            </tbody>
+          </table>
+
+          <!-- Empty State -->
+          <div id="emptyState" class="empty-state hidden">
+            <div class="empty-icon">📦</div>
+            <h4>No Inventory Products Found</h4>
+            <p>No matching products found for the applied search criteria or filters.</p>
+            <button id="btnEmptyReset" class="btn btn-secondary">Clear Filters</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- API Request / Response Inspector Panel -->
+      <section class="inspector-card">
+        <div class="inspector-header">
+          <div class="inspector-title">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <span>Live HTTP & Fetch API Inspector</span>
+            <span class="badge badge-info" id="inspectorMethodBadge">IDLE</span>
+          </div>
+          <span class="inspector-status" id="inspectorStatusText">Ready for Fetch API calls</span>
+        </div>
+        <div class="inspector-body">
+          <div class="inspector-col">
+            <div class="code-title">Request Summary</div>
+            <pre class="code-block" id="inspectorRequest">/* No request triggered yet. Click "Fetch Sample (GET)" or "Sync Cloud (POST)". */</pre>
+          </div>
+          <div class="inspector-col">
+            <div class="code-title">Response JSON (Status <span id="inspectorStatusCode">200</span>)</div>
+            <pre class="code-block" id="inspectorResponse">/* Output payload will appear here after async/await resolution */</pre>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Add / Edit Product Modal -->
+  <div id="productModal" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modalTitle">Register New Inventory Product</h3>
+        <button id="btnModalClose" class="modal-close-btn">&times;</button>
+      </div>
+
+      <form id="productForm" novalidate>
+        <input type="hidden" id="productId" />
+        
+        <div class="form-grid">
+          <div class="form-group col-span-2">
+            <label for="productName">Product Name <span class="required">*</span></label>
+            <input type="text" id="productName" placeholder="e.g. Dell UltraSharp 27-inch 4K Monitor" required />
+            <span class="error-msg" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="productSku">SKU Code <span class="required">*</span></label>
+            <input type="text" id="productSku" placeholder="e.g. MON-DEL-4K" required />
+            <span class="error-msg" id="skuError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="productCategory">Category <span class="required">*</span></label>
+            <select id="productCategory" required>
+              <option value="">Select Category</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Computers">Computers</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Networking">Networking</option>
+              <option value="Storage">Storage</option>
+              <option value="Office Supplies">Office Supplies</option>
+            </select>
+            <span class="error-msg" id="categoryError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="productQuantity">Quantity on Hand <span class="required">*</span></label>
+            <input type="number" id="productQuantity" min="0" placeholder="0" required />
+            <span class="error-msg" id="qtyError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="productUnitPrice">Unit Price ($) <span class="required">*</span></label>
+            <input type="number" id="productUnitPrice" step="0.01" min="0.01" placeholder="0.00" required />
+            <span class="error-msg" id="priceError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="productSupplier">Supplier / Vendor <span class="required">*</span></label>
+            <input type="text" id="productSupplier" placeholder="e.g. Dell Direct India" required />
+            <span class="error-msg" id="supplierError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="productThreshold">Low Stock Alert Threshold <span class="required">*</span></label>
+            <input type="number" id="productThreshold" min="1" value="5" required />
+            <span class="error-msg" id="thresholdError"></span>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="btnModalCancel" class="btn btn-secondary">Cancel</button>
+          <button type="submit" id="btnModalSave" class="btn btn-primary">Save Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notifications Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Footer Info -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Yash Prasanna Bhandari (Roll 08) &bull; Full Stack Development CA3 &bull; Department of Artificial Intelligence & Data Science</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

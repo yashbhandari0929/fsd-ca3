@@ -1,0 +1,4 @@
+[2026-11-14T08:59:08.230Z] [INIT  ] Audit logging initialized.
+[2026-11-14T08:59:09.431Z] [CREATE] Created item DEV-RPI-58G (Qty: 12, Price: $119.99)
+[2026-11-14T08:59:09.462Z] [UPDATE] Updated DEV-RPI-58G. Qty: 12 -> 2
+[2026-11-14T08:59:09.475Z] [ALERT ] Stock threshold reached for DEV-RPI-58G: 2 units remaining

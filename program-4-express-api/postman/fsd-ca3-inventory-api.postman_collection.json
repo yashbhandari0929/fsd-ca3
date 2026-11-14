@@ -1,0 +1,189 @@
+{
+  "info": {
+    "_postman_id": "7130ee3f-ca3-fsd-yash-bhandari",
+    "name": "FSD CA3 - ApexInventory Express REST API",
+    "description": "Comprehensive Postman API test collection for FSD CA3 assignment.\nStudent: Yash Prasanna Bhandari (Roll 08, Div D11ADA, Sem V).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "1. Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Yash Prasanna Bhandari\",\n  \"email\": \"yash.student@college.edu\",\n  \"password\": \"EnterprisePass2026\",\n  \"role\": \"ADMIN\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/register",
+              "host": ["{{base_url}}"],
+              "path": ["api", "auth", "register"]
+            }
+          }
+        },
+        {
+          "name": "2. Login User",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "if (jsonData.token) {",
+                  "    pm.environment.set('jwt_token', jsonData.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"yashbhandari0929@gmail.com\",\n  \"password\": \"admin123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/login",
+              "host": ["{{base_url}}"],
+              "path": ["api", "auth", "login"]
+            }
+          }
+        },
+        {
+          "name": "3. Get Profile (Protected)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/auth/profile",
+              "host": ["{{base_url}}"],
+              "path": ["api", "auth", "profile"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Inventory Management",
+      "item": [
+        {
+          "name": "1. Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/inventory?search=&category=ALL",
+              "host": ["{{base_url}}"],
+              "path": ["api", "inventory"],
+              "query": [
+                { "key": "search", "value": "" },
+                { "key": "category", "value": "ALL" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "2. Get Inventory Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/inventory/stats",
+              "host": ["{{base_url}}"],
+              "path": ["api", "inventory", "stats"]
+            }
+          }
+        },
+        {
+          "name": "3. Get Product By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/inventory/PRD-4001",
+              "host": ["{{base_url}}"],
+              "path": ["api", "inventory", "PRD-4001"]
+            }
+          }
+        },
+        {
+          "name": "4. Create Product (Protected)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Samsung 49-inch Odyssey OLED G9\",\n  \"sku\": \"MON-SAM-G9\",\n  \"category\": \"Electronics\",\n  \"quantity\": 8,\n  \"unitPrice\": 1299.99,\n  \"supplier\": \"Samsung Direct India\",\n  \"minThreshold\": 3\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/inventory",
+              "host": ["{{base_url}}"],
+              "path": ["api", "inventory"]
+            }
+          }
+        },
+        {
+          "name": "5. Update Product (Protected)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quantity\": 25,\n  \"unitPrice\": 1199.00\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/inventory/PRD-4001",
+              "host": ["{{base_url}}"],
+              "path": ["api", "inventory", "PRD-4001"]
+            }
+          }
+        },
+        {
+          "name": "6. Delete Product (Protected)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{jwt_token}}" }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/inventory/PRD-4005",
+              "host": ["{{base_url}}"],
+              "path": ["api", "inventory", "PRD-4005"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3003",
+      "type": "string"
+    },
+    {
+      "key": "jwt_token",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}
+

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "PRD-749413",
+    "name": "Raspberry Pi 5 8GB Starter Kit",
+    "sku": "DEV-RPI-58G",
+    "category": "Computers",
+    "quantity": 2,
+    "unitPrice": 119.99,
+    "supplier": "Raspberry Pi Foundation",
+    "minThreshold": 4,
+    "lastUpdated": "2026-11-14T08:59:09.439Z"
+  },
+  {
+    "id": "PRD-3001",
+    "name": "Dell UltraSharp 27\" 4K Monitor",
+    "sku": "MON-DEL-4K",
+    "category": "Electronics",
+    "quantity": 18,
+    "unitPrice": 549.99,
+    "supplier": "Dell Direct India",
+    "minThreshold": 5,
+    "lastUpdated": "2026-11-10T10:30:00.000Z"
+  },
+  {
+    "id": "PRD-3002",
+    "name": "Logitech MX Master 3S Mouse",
+    "sku": "ACC-LOG-MX3S",
+    "category": "Accessories",
+    "quantity": 42,
+    "unitPrice": 99.5,
+    "supplier": "Logitech Official",
+    "minThreshold": 10,
+    "lastUpdated": "2026-11-11T14:15:00.000Z"
+  },
+  {
+    "id": "PRD-3003",
+    "name": "Apple MacBook Pro 14\" M3 Pro",
+    "sku": "LAP-APP-M3P",
+    "category": "Computers",
+    "quantity": 4,
+    "unitPrice": 1999,
+    "supplier": "Apple Distribution",
+    "minThreshold": 5,
+    "lastUpdated": "2026-11-12T09:00:00.000Z"
+  },
+  {
+    "id": "PRD-3004",
+    "name": "Keychron K2 Mechanical Keyboard",
+    "sku": "KEY-KCH-K2",
+    "category": "Accessories",
+    "quantity": 15,
+    "unitPrice": 89.99,
+    "supplier": "Keychron Global",
+    "minThreshold": 8,
+    "lastUpdated": "2026-11-12T16:45:00.000Z"
+  },
+  {
+    "id": "PRD-3005",
+    "name": "Cisco Catalyst 1000 Gigabit Switch",
+    "sku": "NET-CIS-C10",
+    "category": "Networking",
+    "quantity": 0,
+    "unitPrice": 620,
+    "supplier": "Cisco Systems",
+    "minThreshold": 3,
+    "lastUpdated": "2026-11-13T11:20:00.000Z"
+  },
+  {
+    "id": "PRD-3006",
+    "name": "Samsung 990 Pro 2TB NVMe SSD",
+    "sku": "STR-SAM-990P",
+    "category": "Storage",
+    "quantity": 28,
+    "unitPrice": 169.99,
+    "supplier": "Samsung Semiconductor",
+    "minThreshold": 6,
+    "lastUpdated": "2026-11-14T09:00:00.000Z"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "apex-inventory-node-utility",
+  "version": "1.0.0",
+  "description": "Native Node.js Inventory Utility with HTTP Server, Streams, FileSystem and EventEmitter",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node tests/test-api.js"
+  },
+  "keywords": ["nodejs", "fs", "streams", "eventemitter", "http"],
+  "author": "Yash Prasanna Bhandari (Roll 08, Div D11ADA)",
+  "license": "ISC"
+}
+

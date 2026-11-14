@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: apex-inventory-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: apex-inventory-postgres
+          property: connectionString
+
+databases:
+  - name: apex-inventory-postgres
+    plan: free
+    databaseName: apex_inventory
+    user: apex_user
+

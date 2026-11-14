@@ -1,0 +1,8 @@
+ID,SKU,Name,Category,Quantity,UnitPrice,Supplier,MinThreshold,LastUpdated
+"PRD-749413","DEV-RPI-58G","Raspberry Pi 5 8GB Starter Kit","Computers",2,119.99,"Raspberry Pi Foundation",4,"2026-11-14T08:59:09.439Z"
+"PRD-3001","MON-DEL-4K","Dell UltraSharp 27"" 4K Monitor","Electronics",18,549.99,"Dell Direct India",5,"2026-11-10T10:30:00.000Z"
+"PRD-3002","ACC-LOG-MX3S","Logitech MX Master 3S Mouse","Accessories",42,99.5,"Logitech Official",10,"2026-11-11T14:15:00.000Z"
+"PRD-3003","LAP-APP-M3P","Apple MacBook Pro 14"" M3 Pro","Computers",4,1999,"Apple Distribution",5,"2026-11-12T09:00:00.000Z"
+"PRD-3004","KEY-KCH-K2","Keychron K2 Mechanical Keyboard","Accessories",15,89.99,"Keychron Global",8,"2026-11-12T16:45:00.000Z"
+"PRD-3005","NET-CIS-C10","Cisco Catalyst 1000 Gigabit Switch","Networking",0,620,"Cisco Systems",3,"2026-11-13T11:20:00.000Z"
+"PRD-3006","STR-SAM-990P","Samsung 990 Pro 2TB NVMe SSD","Storage",28,169.99,"Samsung Semiconductor",6,"2026-11-14T09:00:00.000Z"

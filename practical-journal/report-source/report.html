@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FSD CA3 Practical Journal - Yash Prasanna Bhandari</title>
+  <link rel="stylesheet" href="report-style.css">
+</head>
+<body>
+
+  <!-- ========================================================== -->
+  <!-- 1. COVER PAGE -->
+  <!-- ========================================================== -->
+  <div class="page cover-page">
+    <div>
+      <div class="college-badge">University Department of Artificial Intelligence & Data Science</div>
+      <h1 class="cover-title">FULL STACK DEVELOPMENT</h1>
+      <div class="cover-subtitle">Continuous Assessment 3 (CA3) &bull; Practical Programming Exercise</div>
+      <div class="cover-divider"></div>
+      <p style="text-align: center; color: #475569; font-size: 10.5pt; max-width: 550px; margin: 0 auto 30px auto;">
+        An Enterprise-Grade Multi-Tier Inventory Management and Valuation System demonstrating DOM Manipulation, Modern Component Architecture, Streaming Node.js Services, Secured RESTful APIs, and Relational Database Integration.
+      </p>
+    </div>
+
+    <div class="student-card-cover">
+      <table>
+        <tbody>
+          <tr><td>Candidate Name:</td><td>Yash Prasanna Bhandari</td></tr>
+          <tr><td>Roll Number:</td><td>08</td></tr>
+          <tr><td>Subject:</td><td>Full Stack Development (FSD)</td></tr>
+          <tr><td>Division:</td><td>D11ADA</td></tr>
+          <tr><td>Semester:</td><td>V</td></tr>
+          <tr><td>Degree Program:</td><td>B.E. Artificial Intelligence & Data Science</td></tr>
+          <tr><td>Total Programs:</td><td>5 Programs</td></tr>
+          <tr><td>Academic Year:</td><td>2026 - 2027</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cover-footer">
+      <p><strong>GitHub Repository:</strong> <a href="https://github.com/yashbhandari0929/fsd-ca3" style="color: #2563eb; text-decoration: none;">https://github.com/yashbhandari0929/fsd-ca3</a></p>
+      <p>Submitted in partial fulfillment of the academic requirements for Bachelor of Engineering</p>
+    </div>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 2. CERTIFICATE PAGE -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <div class="certificate-box">
+      <div class="cert-title">Certificate of Completion</div>
+      <p style="font-size: 10pt; color: #64748b; margin-bottom: 20px;">DEPARTMENT OF ARTIFICIAL INTELLIGENCE & DATA SCIENCE</p>
+      
+      <p class="cert-body">
+        This is to certify that <strong>Mr. Yash Prasanna Bhandari</strong>, bearing <strong>Roll Number: 08</strong>, student of <strong>Semester V</strong>, Division <strong>D11ADA</strong>, Bachelor of Engineering in <strong>Artificial Intelligence and Data Science</strong>, has satisfactorily performed and submitted all the practical exercises for <strong>Continuous Assessment 3 (CA3)</strong> in the subject of <strong>Full Stack Development (FSD)</strong> during the academic term 2026–2027.
+        <br><br>
+        The five programs embodied in this journal demonstrate high proficiency in Vanilla JavaScript DOM architectures, React 18 component-driven SPAs, Native Node.js streaming services, Express.js RESTful APIs with JWT authentication, and Full Stack integration with Sequelize ORM database persistence.
+      </p>
+
+      <div class="sign-grid">
+        <div class="sign-box">
+          <div class="sign-line"></div>
+          <div class="sign-label">Yash P. Bhandari</div>
+          <div class="sign-sub">Student Candidate (Roll 08)</div>
+        </div>
+        <div class="sign-box">
+          <div class="sign-line"></div>
+          <div class="sign-label">Internal Faculty Guide</div>
+          <div class="sign-sub">Dept. of AI & Data Science</div>
+        </div>
+        <div class="sign-box">
+          <div class="sign-line"></div>
+          <div class="sign-label">Head of Department</div>
+          <div class="sign-sub">Engineering & Technology</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="sub-title" style="margin-top: 30px;">Candidate Declaration</h2>
+    <p>
+      I hereby declare that this practical assignment entitled <strong>"Full Stack Development – CA3 Programming Exercise"</strong> submitted by me is an original implementation designed, tested, and documented under the supervision of my faculty members. All source code, architectural configurations, and documentation have been independently verified and committed to my public repository at <code>https://github.com/yashbhandari0929/fsd-ca3</code>.
+    </p>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 3. ACKNOWLEDGEMENT -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <h1 class="section-title">Acknowledgement</h1>
+    <p>
+      I express my sincere and deep gratitude to our respected faculty members and laboratory instructors of the <strong>Department of Artificial Intelligence and Data Science</strong> for providing their expert guidance, encouragement, and constructive critique throughout the course of this Full Stack Development assignment.
+    </p>
+    <p>
+      I also convey my heartfelt thanks to our Head of Department and the college administration for providing cutting-edge laboratory facilities, computing infrastructure, and access to cloud deployment platforms that made the conceptualization, execution, and verification of these five advanced engineering exercises possible.
+    </p>
+    <p>
+      Finally, I thank my peers and teammates in Division <strong>D11ADA</strong> for their collaborative discussions and valuable insights during technical troubleshooting and code reviews.
+    </p>
+
+    <div style="margin-top: 40px; text-align: right;">
+      <p><strong>Yash Prasanna Bhandari</strong></p>
+      <p style="color: #64748b; font-size: 9pt;">Roll No: 08 &bull; Division: D11ADA</p>
+      <p style="color: #64748b; font-size: 9pt;">B.E. Artificial Intelligence & Data Science</p>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 4. TABLE OF CONTENTS / INDEX -->
+    <!-- ========================================================== -->
+    <h1 class="section-title" style="margin-top: 50px;">Table of Contents (Index)</h1>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 10%;">Sr. No.</th>
+          <th style="width: 55%;">Program / Section Description</th>
+          <th style="width: 20%;">Course Outcome</th>
+          <th style="width: 15%; text-align: right;">Page Ref.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>—</td>
+          <td><strong>Introduction to ApexInventory Project</strong></td>
+          <td>General Overview</td>
+          <td style="text-align: right;">4</td>
+        </tr>
+        <tr>
+          <td><strong>01</strong></td>
+          <td><strong>Program 1:</strong> Browser-Based Vanilla JS Inventory Dashboard</td>
+          <td><span class="badge badge-co">CO1, CO2</span></td>
+          <td style="text-align: right;">5</td>
+        </tr>
+        <tr>
+          <td><strong>02</strong></td>
+          <td><strong>Program 2:</strong> React 18 Component-Driven Architecture & Router</td>
+          <td><span class="badge badge-co">CO3</span></td>
+          <td style="text-align: right;">8</td>
+        </tr>
+        <tr>
+          <td><strong>03</strong></td>
+          <td><strong>Program 3:</strong> Native Node.js Inventory Utility, Streams & Events</td>
+          <td><span class="badge badge-co">CO4</span></td>
+          <td style="text-align: right;">11</td>
+        </tr>
+        <tr>
+          <td><strong>04</strong></td>
+          <td><strong>Program 4:</strong> Express.js REST API with JWT Authentication & bcrypt</td>
+          <td><span class="badge badge-co">CO5</span></td>
+          <td style="text-align: right;">14</td>
+        </tr>
+        <tr>
+          <td><strong>05</strong></td>
+          <td><strong>Program 5:</strong> Full Stack React Integration with Sequelize ORM</td>
+          <td><span class="badge badge-co">CO6</span></td>
+          <td style="text-align: right;">17</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td><strong>Relational Database Schema & API Documentation</strong></td>
+          <td>System Specifications</td>
+          <td style="text-align: right;">20</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td><strong>Automated Testing & Quality Assurance Verification</strong></td>
+          <td>Quality Assurance</td>
+          <td style="text-align: right;">21</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td><strong>Cloud Deployment Guide (Vercel & Render)</strong></td>
+          <td>Production Setup</td>
+          <td style="text-align: right;">22</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td><strong>Conclusion, References & Course Outcome Attainment</strong></td>
+          <td>Academic Mapping</td>
+          <td style="text-align: right;">23</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 5. INTRODUCTION -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <h1 class="section-title">1. Introduction to the ApexInventory Project</h1>
+    
+    <h2 class="sub-title">1.1 Context and Motivation</h2>
+    <p>
+      In modern enterprise software engineering, robust inventory management forms the foundational backbone of supply chain logistics, e-commerce operations, and financial auditing. As companies scale, inventory applications must transition from client-side dynamic spreadsheets to distributed multi-tier web systems capable of serving thousands of concurrent transactions with real-time stock alerts, strict cryptographic authentication, and durable relational database persistence.
+    </p>
+    <p>
+      This Continuous Assessment 3 (CA3) project, titled <strong>ApexInventory</strong>, implements an enterprise-grade stock valuation and catalog management platform across five progressive architectural paradigms. It was architected by <strong>Yash Prasanna Bhandari (Roll No: 08, Division D11ADA)</strong> to demonstrate practical mastery of the entire web stack.
+    </p>
+
+    <h2 class="sub-title">1.2 Progressive Multi-Tier Architecture</h2>
+    <p>
+      The assignment is structured into five distinct, decoupled programs that illustrate the evolution of web technologies:
+    </p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Tier / Program</th>
+          <th>Primary Tech Stack</th>
+          <th>Core Architectural Concepts Demonstrated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Program 1: Vanilla JS</strong></td>
+          <td>HTML5, CSS3, ES6+ JS, Fetch API</td>
+          <td>DOM tree mutation, event delegation, client-side input validation, asynchronous fetch pipeline, local persistence.</td>
+        </tr>
+        <tr>
+          <td><strong>Program 2: React SPA</strong></td>
+          <td>React 18, Vite, React Router v6</td>
+          <td>Unidirectional data flow, declarative UI, custom hook lifecycle management (<code>useState</code>, <code>useEffect</code>, <code>useMemo</code>), SPA navigation.</td>
+        </tr>
+        <tr>
+          <td><strong>Program 3: Native Node</strong></td>
+          <td>Node.js Core (http, fs, stream, events)</td>
+          <td>Zero-dependency server architecture, non-blocking file I/O, custom Transform Streams for memory-safe CSV generation, Event-driven audit logging.</td>
+        </tr>
+        <tr>
+          <td><strong>Program 4: Express REST API</strong></td>
+          <td>Express.js, JWT, bcryptjs, Middleware</td>
+          <td>Modular controller-router architecture, request logger middleware, payload validator, centralized error handlers, salted password hashing, JWT guards.</td>
+        </tr>
+        <tr>
+          <td><strong>Program 5: Full Stack ORM</strong></td>
+          <td>React 18, Express, Sequelize, PostgreSQL / SQLite</td>
+          <td>End-to-end full stack integration, ORM schema migrations, ACID relational integrity, CORS security, multi-environment cloud deployment (Vercel & Render).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="sub-title">1.3 Unified Enterprise Domain Model</h2>
+    <p>
+      Across all five applications, a consistent enterprise stock keeping unit (SKU) domain model is utilized. Each product record consists of:
+    </p>
+    <ul style="margin-left: 20px; font-size: 9pt; line-height: 1.6;">
+      <li><code>id</code>: Unique internal system identifier (e.g. <code>PRD-1001</code>).</li>
+      <li><code>sku</code>: Alphanumeric Stock Keeping Unit code (e.g. <code>MON-DEL-4K</code>).</li>
+      <li><code>name</code>: Official descriptive item title.</li>
+      <li><code>category</code>: High-level classification (Electronics, Computers, Accessories, Networking, Storage).</li>
+      <li><code>quantity</code>: Current physical inventory on hand.</li>
+      <li><code>unitPrice</code>: Wholesale acquisition cost per unit in USD.</li>
+      <li><code>supplier</code>: Authorized vendor distributor.</li>
+      <li><code>minThreshold</code>: Reorder alert safety threshold.</li>
+      <li><code>lastUpdated</code>: ISO 8601 mutation timestamp.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 6. PROGRAM 1 -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <h1 class="section-title">2. Program 1: Browser-Based Vanilla JS Inventory Dashboard</h1>
+      <span class="badge badge-co">Mapped to: CO1, CO2</span>
+    </div>
+
+    <h2 class="sub-title">2.1 Aim & Objectives</h2>
+    <p>
+      To develop an interactive, browser-based inventory management dashboard using <strong>semantic HTML5</strong>, <strong>modern responsive CSS3</strong>, and <strong>Vanilla JavaScript (ES6+)</strong> that performs client-side CRUD operations via dynamic DOM manipulation, implements strict multi-field input validation, demonstrates asynchronous network requests via the <strong>Fetch API</strong> (`async`/`await`), and persists data to <code>localStorage</code>.
+    </p>
+
+    <h2 class="sub-title">2.2 Software & Technologies Used</h2>
+    <ul style="margin-left: 20px; font-size: 8.5pt; line-height: 1.6;">
+      <li><strong>HTML5:</strong> Semantic tags (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;form&gt;</code>).</li>
+      <li><strong>CSS3:</strong> CSS Custom Properties (Design Tokens), CSS Grid, Flexbox, transitions, and animations.</li>
+      <li><strong>JavaScript (ES6+):</strong> Arrow functions, destructuring, template literals, array methods (<code>filter</code>, <code>reduce</code>, <code>map</code>, <code>sort</code>), DOM manipulation APIs.</li>
+      <li><strong>Asynchronous Fetch API:</strong> <code>fetch()</code>, <code>Promise</code>, <code>async/await</code> pipeline for GET and simulated POST operations.</li>
+      <li><strong>Persistence:</strong> <code>Window.localStorage</code> API.</li>
+    </ul>
+
+    <h2 class="sub-title">2.3 Theoretical Background</h2>
+    <p>
+      The Document Object Model (DOM) is an object-oriented structural representation of an HTML document where nodes represent elements, attributes, and text. Vanilla JavaScript interacts with the DOM tree through standard methods such as <code>document.getElementById()</code>, <code>createElement()</code>, and <code>appendChild()</code>.
+    </p>
+    <p>
+      The <strong>Fetch API</strong> provides a promise-based interface for fetching resources across the network asynchronously. Combining <code>fetch()</code> with <code>async/await</code> syntax enables non-blocking HTTP transactions that keep the browser user interface fluid and responsive while processing remote payloads.
+    </p>
+
+    <h2 class="sub-title">2.4 Implementation Algorithm</h2>
+    <ol style="margin-left: 20px; font-size: 8.5pt; line-height: 1.6;">
+      <li><strong>Initialization:</strong> Listen for <code>DOMContentLoaded</code>. Check <code>localStorage</code> for existing inventory state; if empty, trigger <code>fetchSampleData()</code> using <code>fetch('./sample-data.json')</code>.</li>
+      <li><strong>Metrics Computation:</strong> Calculate total items, valuation ($\sum Qty \times Price$), low-stock count ($Qty \le Threshold$), and out-of-stock items ($Qty = 0$) using <code>Array.reduce()</code>.</li>
+      <li><strong>DOM Table Rendering:</strong> Iterate through filtered items, create <code>&lt;tr&gt;</code> nodes with SKU badges, stock status indicators (In Stock / Low / Out), and action buttons.</li>
+      <li><strong>Form Validation:</strong> On submission, assert that Name is $\ge 3$ characters, SKU matches regex <code>/^[A-Z0-9\-_]{3,20}$/</code>, price $> 0$, and quantity $\ge 0$. Display inline error messages on failure.</li>
+      <li><strong>Inspector Panel Synchronization:</strong> Format request headers and response JSON and bind to the on-screen live inspector code block.</li>
+    </ol>
+
+    <h2 class="sub-title">2.5 Key Source Code Excerpt (script.js)</h2>
+    <pre class="code-block"><code>// Asynchronous Data Fetching Pipeline using Fetch API & async/await
+async function fetchSampleData() {
+  inspectorMethodBadge.textContent = 'GET';
+  const startTime = performance.now();
+  try {
+    const response = await fetch('./sample-data.json');
+    if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+    const data = await response.json();
+    const duration = (performance.now() - startTime).toFixed(1);
+
+    inventory = data;
+    saveToStorage();
+    renderTable();
+    updateStatistics();
+
+    // Update Live HTTP Inspector Panel
+    inspectorStatusCode.textContent = '200 OK';
+    inspectorStatusText.textContent = `200 OK (${duration}ms) - Retrieved ${data.length} records`;
+    inspectorResponse.textContent = JSON.stringify(data, null, 2);
+    showToast(`Loaded ${data.length} sample items via Fetch API`, 'success');
+  } catch (err) {
+    showToast(`Fetch failed: ${err.message}`, 'error');
+  }
+}</code></pre>
+  </div>
+
+  <!-- PROGRAM 1 OUTPUT & RESULTS -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <h2 class="sub-title">2.6 Program 1 Verified Execution Screenshots</h2>
+
+    <div class="screenshot-container">
+      <img src="../../program-1-vanilla-js/screenshots/01_dashboard.png" alt="Program 1 Dashboard">
+      <div class="screenshot-caption">
+        <span>Figure 2.1: Program 1 Vanilla JS Enterprise Dashboard with Real-Time Statistics & Dynamic Catalog Table</span>
+        <span class="badge badge-pass">VERIFIED PASS</span>
+      </div>
+    </div>
+
+    <div class="screenshot-container" style="margin-top: 15px;">
+      <img src="../../program-1-vanilla-js/screenshots/03_fetch_inspector.png" alt="Program 1 Live Fetch Inspector">
+      <div class="screenshot-caption">
+        <span>Figure 2.2: Program 1 Live Fetch API Request/Response Inspector Displaying Asynchronous JSON Resolution</span>
+        <span class="badge badge-pass">VERIFIED PASS</span>
+      </div>
+    </div>
+
+    <h2 class="sub-title">2.7 Result & Learning Outcomes</h2>
+    <p>
+      Program 1 was successfully implemented and tested across Google Chrome and Microsoft Edge. All CRUD actions dynamically modified the DOM without page reloading, form inputs strictly adhered to validation constraints, and the Fetch API inspector visually demonstrated asynchronous HTTP GET and simulated POST request pipelines. State was persistently preserved in <code>localStorage</code>.
+    </p>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 7. PROGRAM 2 -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <h1 class="section-title">3. Program 2: React Component-Driven SPA & React Router</h1>
+      <span class="badge badge-co">Mapped to: CO3</span>
+    </div>
+
+    <h2 class="sub-title">3.1 Aim & Objectives</h2>
+    <p>
+      To architect and implement an enterprise-grade Inventory Management Application using <strong>React 18</strong>, functional components, JSX, component state management with hooks (<code>useState</code>, <code>useEffect</code>, <code>useMemo</code>), controlled form components, and declarative multi-route navigation using <strong>React Router v6</strong>.
+    </p>
+
+    <h2 class="sub-title">3.2 Software & Technologies Used</h2>
+    <ul style="margin-left: 20px; font-size: 8.5pt; line-height: 1.6;">
+      <li><strong>React 18.3:</strong> Functional components, virtual DOM reconciliation, JSX syntax.</li>
+      <li><strong>React Router DOM v6:</strong> Declarative client-side routing (<code>&lt;BrowserRouter&gt;</code>, <code>&lt;Routes&gt;</code>, <code>&lt;Route&gt;</code>, <code>&lt;NavLink&gt;</code>).</li>
+      <li><strong>React Hooks:</strong> <code>useState</code> for local and shared state, <code>useEffect</code> for persistent side-effects, <code>useMemo</code> for memoized search/filter queries, and <code>useNavigate</code> for programmatic routing.</li>
+      <li><strong>Vite 6:</strong> Modern ES-module build tool and dev server.</li>
+    </ul>
+
+    <h2 class="sub-title">3.3 Theoretical Background</h2>
+    <p>
+      React replaces imperative DOM manipulation with a declarative component paradigm. State changes cause React to construct a lightweight Virtual DOM tree, compute the minimum difference (reconciliation diffing algorithm), and batch mutations to the physical browser DOM.
+    </p>
+    <p>
+      React Router facilitates Single Page Application (SPA) architecture by matching browser URL paths to distinct component subtrees without triggering browser page refreshes, preserving application state in memory.
+    </p>
+
+    <h2 class="sub-title">3.4 Component Architecture & Hierarchy</h2>
+    <pre class="code-block"><code>App (Top-Level State Store & Router Coordinator)
+├── Navbar (Persistent Navigation, Active Tab Highlighting, Student Tag)
+├── Routes
+│   ├── Route "/" -> DashboardPage (Metrics Overview & Priority Reorder Alerts)
+│   ├── Route "/inventory" -> InventoryPage (Catalog with SearchFilterBar & StockBadges)
+│   ├── Route "/add" -> AddProductPage (Controlled Form with Multi-Field Validation)
+│   ├── Route "/analytics" -> AnalyticsPage (Category Valuation Breakdown & Progress Bars)
+│   └── Route "/about" -> AboutPage (Candidate Academic Details & CO Attainment Card)
+└── ProductFormModal (Reusable Add/Edit Dialog with Keyboard Shortcuts & Backdrop Dismissal)</code></pre>
+
+    <h2 class="sub-title">3.5 Key Source Code Excerpt (App.jsx)</h2>
+    <pre class="code-block"><code>// Top-Level State Coordinator with Synchronized LocalStorage Persistence
+export default function App() {
+  const [products, setProducts] = useState(() => {
+    const stored = localStorage.getItem('apex_inventory_react_store_v1');
+    return stored ? JSON.parse(stored) : initialProducts;
+  });
+
+  // Automated persistence sync hook
+  useEffect(() => {
+    localStorage.setItem('apex_inventory_react_store_v1', JSON.stringify(products));
+  }, [products]);
+
+  const handleSaveProduct = (productData) => {
+    if (productData.id) {
+      setProducts(prev => prev.map(p => p.id === productData.id ? productData : p));
+    } else {
+      setProducts(prev => [{ ...productData, id: 'PRD-' + Date.now().toString().slice(-6) }, ...prev]);
+    }
+  };
+  // ... Routes and Render Tree
+}</code></pre>
+  </div>
+
+  <!-- PROGRAM 2 OUTPUT & RESULTS -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <h2 class="sub-title">3.6 Program 2 Verified Execution Screenshots</h2>
+
+    <div class="screenshot-container">
+      <img src="../../program-2-react/screenshots/01_dashboard.png" alt="Program 2 Dashboard">
+      <div class="screenshot-caption">
+        <span>Figure 3.1: Program 2 React 18 Dashboard Displaying Stat Cards & Priority Reorder Warning Alerts</span>
+        <span class="badge badge-pass">VERIFIED PASS</span>
+      </div>
+    </div>
+
+    <div class="screenshot-container" style="margin-top: 15px;">
+      <img src="../../program-2-react/screenshots/02_catalog_filter.png" alt="Program 2 Inventory Catalog">
+      <div class="screenshot-caption">
+        <span>Figure 3.2: Program 2 Master Inventory Catalog Route (/inventory) with Reactive Filtering</span>
+        <span class="badge badge-pass">VERIFIED PASS</span>
+      </div>
+    </div>
+
+    <h2 class="sub-title">3.7 Result & Learning Outcomes</h2>
+    <p>
+      Program 2 successfully demonstrated modern React 18 functional architecture. The application executed seamlessly without full-page reloads across five declarative routes. State synchronization between sibling components was handled via lifted state and props contracts, while memoized calculations ensured optimal rendering performance.
+    </p>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 8. PROGRAM 3 -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <h1 class="section-title">4. Program 3: Node.js Core Inventory Utility & Streams</h1>
+      <span class="badge badge-co">Mapped to: CO4</span>
+    </div>
+
+    <h2 class="sub-title">4.1 Aim & Objectives</h2>
+    <p>
+      To develop an asynchronous backend Inventory Utility using <strong>pure Node.js core modules</strong> (without Express or third-party packages) utilizing the <strong>File System</strong> module for persistence, the <strong>Path</strong> module for cross-platform file resolution, <strong>EventEmitter</strong> for decoupled audit notifications, <strong>Streams</strong> (custom <code>Transform</code> stream) for memory-efficient CSV export, and a native <strong>HTTP server</strong>.
+    </p>
+
+    <h2 class="sub-title">4.2 Software & Technologies Used</h2>
+    <ul style="margin-left: 20px; font-size: 8.5pt; line-height: 1.6;">
+      <li><strong>Node.js Core Runtimes (v24.x):</strong> Zero external npm dependencies.</li>
+      <li><code>http</code>: Web server instantiation (<code>http.createServer</code>), header dispatch, request chunk parsing.</li>
+      <li><code>fs/promises</code>: Non-blocking asynchronous file reads, atomic JSON updates, directory initialization.</li>
+      <li><code>path</code>: Cross-platform directory path normalization (<code>path.resolve</code>, <code>path.join</code>).</li>
+      <li><code>events</code>: Subclassing <code>EventEmitter</code> to construct <code>InventoryEventEmitter</code>.</li>
+      <li><code>stream</code>: <code>stream.Transform</code> pipeline for chunked JSON-to-CSV data streaming.</li>
+    </ul>
+
+    <h2 class="sub-title">4.3 Theoretical Background</h2>
+    <p>
+      Node.js operates on an event-driven, single-threaded event loop utilizing non-blocking asynchronous I/O via the <code>libuv</code> abstraction layer. The <strong>EventEmitter</strong> class facilitates the Publish-Subscribe pattern, decoupling event publishers from asynchronous event listeners.
+    </p>
+    <p>
+      <strong>Streams</strong> process data in discrete chunks rather than buffering entire payloads into memory. When exporting large datasets, piping a <code>Readable</code> stream through a custom <code>Transform</code> stream directly to the HTTP <code>ServerResponse</code> avoids memory exhaustion and dramatically reduces Time to First Byte (TTFB).
+    </p>
+
+    <h2 class="sub-title">4.4 Architecture & Event Flow</h2>
+    <pre class="code-block"><code>HTTP Request (GET / POST / PUT / DELETE)
+       │
+       ▼
+Native http.createServer() Router
+       │
+       ├─► Read/Write File System (fs/promises, data/inventory.json)
+       │
+       ├─► Event Emitter (item:created, item:updated, stock:low_alert)
+       │         │
+       │         └─► Appends formatted entry to data/audit.log
+       │
+       └─► Transform Stream (JsonToCsvStream: Readable -> Transform -> Response)</code></pre>
+
+    <h2 class="sub-title">4.5 Key Source Code Excerpt (streamExporter.js)</h2>
+    <pre class="code-block"><code>// Custom Transform Stream for Memory-Safe CSV Conversion
+export class JsonToCsvStream extends Transform {
+  constructor(options = {}) {
+    super({ ...options, objectMode: true });
+    this.isFirstChunk = true;
+  }
+
+  _transform(chunk, encoding, callback) {
+    if (this.isFirstChunk) {
+      this.push('ID,SKU,Name,Category,Quantity,UnitPrice,Supplier,MinThreshold\n');
+      this.isFirstChunk = false;
+    }
+    const line = `"${chunk.id}","${chunk.sku}","${chunk.name}","${chunk.category}",${chunk.quantity},${chunk.unitPrice},"${chunk.supplier}",${chunk.minThreshold}\n`;
+    this.push(line);
+    callback();
+  }
+}</code></pre>
+  </div>
+
+  <!-- PROGRAM 3 OUTPUT & RESULTS -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <h2 class="sub-title">4.6 Program 3 Verified Execution Screenshots</h2>
+
+    <div class="screenshot-container">
+      <img src="../../program-3-node/screenshots/01_server_startup.png" alt="Program 3 Native Node Server">
+      <div class="screenshot-caption">
+        <span>Figure 4.1: Program 3 Native Node.js Server Active Documentation & Available Endpoints Listing</span>
+        <span class="badge badge-pass">VERIFIED PASS</span>
+      </div>
+    </div>
+
+    <div class="screenshot-container" style="margin-top: 15px;">
+      <img src="../../program-3-node/screenshots/04_stream_csv_export.png" alt="Program 3 Streamed CSV Export">
+      <div class="screenshot-caption">
+        <span>Figure 4.2: Program 3 Streaming CSV Data Export Generated via Node.js Transform Stream Pipeline</span>
+        <span class="badge badge-pass">VERIFIED PASS</span>
+      </div>
+    </div>
+
+    <h2 class="sub-title">4.7 Result & Learning Outcomes</h2>
+    <p>
+      Program 3 demonstrated the power of Node.js core modules without external abstractions. The native HTTP server handled routing, query strings, and error codes correctly. <code>EventEmitter</code> reliably persisted audit trails to <code>data/audit.log</code>, and <code>JsonToCsvStream</code> transformed database JSON into streaming CSV responses.
+    </p>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 9. PROGRAM 4 -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <h1 class="section-title">5. Program 4: Express.js REST API with JWT Authentication</h1>
+      <span class="badge badge-co">Mapped to: CO5</span>
+    </div>
+
+    <h2 class="sub-title">5.1 Aim & Objectives</h2>
+    <p>
+      To build a secure, production-grade <strong>Express.js RESTful API</strong> for inventory management featuring complete CRUD endpoints, custom request logging middleware, input validation middleware, centralized error handling, user registration and login with <strong>bcrypt password hashing</strong>, and <strong>JSON Web Token (JWT)</strong> authentication guards on protected routes.
+    </p>
+
+    <h2 class="sub-title">5.2 Software & Technologies Used</h2>
+    <ul style="margin-left: 20px; font-size: 8.5pt; line-height: 1.6;">
+      <li><strong>Express.js 4.x:</strong> RESTful routing, middleware pipelines, error handlers.</li>
+      <li><strong>bcryptjs:</strong> One-way cryptographic password salting and hashing (10 salt rounds).</li>
+      <li><strong>jsonwebtoken:</strong> HMAC-SHA256 stateless access token generation and authorization verification.</li>
+      <li><strong>cors & dotenv:</strong> Cross-Origin Resource Sharing and environment configuration.</li>
+      <li><strong>Postman:</strong> API testing collection with dynamic environment variables.</li>
+    </ul>
+
+    <h2 class="sub-title">5.3 Middleware Chain Architecture</h2>
+    <p>
+      Express processes incoming HTTP requests sequentially through a chain of composable middleware functions:
+    </p>
+    <ol style="margin-left: 20px; font-size: 8.5pt; line-height: 1.6;">
+      <li><strong>CORS & Body Parser:</strong> Sets access headers and parses raw buffers into <code>req.body</code>.</li>
+      <li><strong>Custom Request Logger:</strong> Intercepts <code>res.on('finish')</code> to log method, URL, status code, and latency in milliseconds.</li>
+      <li><strong>Payload Validator:</strong> Validates registration fields, passwords, SKU patterns, and numeric ranges.</li>
+      <li><strong>JWT Authentication Guard:</strong> Validates <code>Authorization: Bearer &lt;token&gt;</code>; passes decoded identity to <code>req.user</code> or terminates with 401/403.</li>
+      <li><strong>Centralized Error Interceptor:</strong> Catches unexpected synchronous and asynchronous exceptions, returning sanitized JSON payloads.</li>
+    </ol>
+
+    <h2 class="sub-title">5.4 Key Source Code Excerpt (authController.js)</h2>
+    <pre class="code-block"><code>// User Registration with Salted bcrypt Password Hashing & JWT Token Generation
+export async function register(req, res, next) {
+  try {
+    const { name, email, password, role } = req.body;
+    const existing = users.find(u => u.email === email.trim().toLowerCase());
+    if (existing) return res.status(409).json({ success: false, error: 'User already exists' });
+
+    // Generate cryptographic salt and hash password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    const newUser = { id: 'USR-' + Date.now(), name, email, password: hashedPassword, role: role || 'MANAGER' };
+    users.push(newUser);
+
+    // Sign stateless JWT access token
+    const token = jwt.sign({ id: newUser.id, email: newUser.email, role: newUser.role }, JWT_SECRET, { expiresIn: '8h' });
+
+    return res.status(201).json({ success: true, message: 'User registered', token, user: { id: newUser.id, email } });
+  } catch (err) {
+    next(err);
+  }
+}</code></pre>
+  </div>
+
+  <!-- PROGRAM 4 OUTPUT & RESULTS -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <h2 class="sub-title">5.5 Program 4 Verified Execution Screenshots</h2>
+
+    <div class="screenshot-container">
+      <img src="../../program-4-express-api/screenshots/01_api_landing.png" alt="Program 4 Express API Landing">
+      <div class="screenshot-caption">
+        <span>Figure 5.1: Program 4 Express.js REST API Documentation Landing Page with Endpoint Authorization Matrix</span>
+        <span class="badge badge-pass">VERIFIED PASS</span>
+      </div>
+    </div>
+
+    <div class="screenshot-container" style="margin-top: 15px;">
+      <img src="../../program-4-express-api/screenshots/02_auth_register_login.png" alt="Program 4 Automated Integration Tests">
+      <div class="screenshot-caption">
+        <span>Figure 5.2: Program 4 Automated Integration Test Execution (Register, Bcrypt Hash, Login, JWT Guard & CRUD)</span>
+        <span class="badge badge-pass">VERIFIED PASS</span>
+      </div>
+    </div>
+
+    <h2 class="sub-title">5.6 Result & Learning Outcomes</h2>
+    <p>
+      Program 4 fulfilled all REST and authentication objectives. Automated integration tests confirmed that unauthenticated requests to protected endpoints received <code>401 Unauthorized</code>, passwords were securely hashed with bcrypt salts, valid JWT tokens authorized CRUD transactions, and custom middleware logged all requests.
+    </p>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 10. PROGRAM 5 -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <h1 class="section-title">6. Program 5: Full Stack Integration with Sequelize ORM & Database</h1>
+      <span class="badge badge-co">Mapped to: CO6</span>
+    </div>
+
+    <h2 class="sub-title">6.1 Aim & Objectives</h2>
+    <p>
+      To architect and implement an end-to-end <strong>Full Stack Web Application</strong> integrating a modern <strong>React 18</strong> client with an <strong>Express.js</strong> backend API that persists enterprise inventory records in a real relational database managed via <strong>Sequelize ORM</strong> (supporting PostgreSQL in production and SQLite locally), complete with error states, loading spinners, CORS security, and production deployment blueprints for Vercel and Render.
+    </p>
+
+    <h2 class="sub-title">6.2 Software & Technologies Used</h2>
+    <ul style="margin-left: 20px; font-size: 8.5pt; line-height: 1.6;">
+      <li><strong>Frontend:</strong> React 18 SPA, Vite, Fetch API service module, CSS Design Tokens.</li>
+      <li><strong>Backend:</strong> Node.js, Express.js 4.x, CORS security middleware, dotenv.</li>
+      <li><strong>ORM Layer:</strong> <strong>Sequelize ORM 6.x</strong> (DataTypes, model validation, query builders).</li>
+      <li><strong>Database Engines:</strong> <strong>PostgreSQL</strong> (Cloud via <code>pg</code>, <code>pg-hstore</code>) and <strong>SQLite</strong> (Local via <code>sqlite3</code>).</li>
+      <li><strong>Deployment Platforms:</strong> Vercel (Frontend static optimization) and Render (Backend web service & managed PostgreSQL).</li>
+    </ul>
+
+    <h2 class="sub-title">6.3 Full Stack Data Flow Architecture</h2>
+    <pre class="code-block"><code>[ User Interaction ] ──► React Component (App.jsx)
+                                 │
+                                 ▼
+                     Fetch API Client (api.js)
+                                 │ HTTP JSON Request (CORS Whitelisted)
+                                 ▼
+                     Express Router (/api/products)
+                                 │
+                                 ▼
+                     Sequelize ORM Controller
+                                 │
+                                 ▼
+                     [ Relational Database ]
+                     (PostgreSQL on Render / SQLite Locally)</code></pre>
+
+    <h2 class="sub-title">6.4 Key Source Code Excerpt (Product.js Sequelize Model)</h2>
+    <pre class="code-block"><code>// Relational Schema & Constraints Definition via Sequelize ORM
+const Product = sequelize.define('Product', {
+  id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
+  sku: { type: DataTypes.STRING, allowNull: false, unique: true, validate: { len: [3, 20] } },
+  name: { type: DataTypes.STRING, allowNull: false, validate: { len: [3, 100] } },
+  category: { type: DataTypes.STRING, allowNull: false, defaultValue: 'General' },
+  quantity: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 0, validate: { min: 0 } },
+  unitPrice: { type: DataTypes.DECIMAL(10, 2), allowNull: false, validate: { min: 0.01 } },
+  supplier: { type: DataTypes.STRING, allowNull: false, defaultValue: 'Standard Vendor' },
+  minThreshold: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 5, validate: { min: 1 } }
+}, { tableName: 'products', timestamps: true });</code></pre>
+  </div>
+
+  <!-- PROGRAM 5 OUTPUT & RESULTS -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <h2 class="sub-title">6.5 Program 5 Verified Execution Screenshots</h2>
+
+    <div class="screenshot-container">
+      <img src="../../program-5-fullstack-integration/screenshots/01_frontend_dashboard.png" alt="Program 5 Full Stack Dashboard">
+      <div class="screenshot-caption">
+        <span>Figure 6.1: Program 5 Integrated Full Stack Dashboard Connected Live to Express & Sequelize ORM Backend</span>
+        <span class="badge badge-pass">VERIFIED PASS</span>
+      </div>
+    </div>
+
+    <div class="screenshot-container" style="margin-top: 15px;">
+      <img src="../../program-5-fullstack-integration/screenshots/04_deployment_config.png" alt="Program 5 Cloud Deployment Blueprint">
+      <div class="screenshot-caption">
+        <span>Figure 6.2: Program 5 Production Cloud Deployment Configurations (Vercel vercel.json & Render render.yaml)</span>
+        <span class="badge badge-pass">VERIFIED PASS</span>
+      </div>
+    </div>
+
+    <h2 class="sub-title">6.6 Result & Learning Outcomes</h2>
+    <p>
+      Program 5 achieved seamless full stack integration. The React client communicated with the Express backend via REST API calls, executing CRUD operations persisted directly into a relational database via Sequelize ORM. Loading indicators and error retry banners ensured high usability during latency or server interruptions.
+    </p>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 11. DATABASE SCHEMA & API DOCUMENTATION -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <h1 class="section-title">7. Database Schema & API Documentation</h1>
+
+    <h2 class="sub-title">7.1 Relational Schema Definition (DDL)</h2>
+    <p>
+      The relational database schema is generated automatically by Sequelize ORM using <code>sequelize.sync()</code>. The resulting PostgreSQL / SQLite table structure is shown below:
+    </p>
+    <pre class="code-block"><code>CREATE TABLE products (
+  id            INTEGER PRIMARY KEY AUTOINCREMENT, -- SERIAL in PostgreSQL
+  sku           VARCHAR(20) NOT NULL UNIQUE,
+  name          VARCHAR(100) NOT NULL,
+  category      VARCHAR(50) NOT NULL DEFAULT 'General',
+  quantity      INTEGER NOT NULL DEFAULT 0 CHECK (quantity >= 0),
+  unitPrice     DECIMAL(10, 2) NOT NULL CHECK (unitPrice >= 0.01),
+  supplier      VARCHAR(100) NOT NULL DEFAULT 'Standard Vendor',
+  minThreshold  INTEGER NOT NULL DEFAULT 5 CHECK (minThreshold >= 1),
+  createdAt     DATETIME NOT NULL,
+  updatedAt     DATETIME NOT NULL
+);</code></pre>
+
+    <h2 class="sub-title">7.2 Comprehensive REST API Reference</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Endpoint</th>
+          <th>Auth Guard</th>
+          <th>Description</th>
+          <th>Success Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>POST</code></td>
+          <td><code>/api/auth/register</code></td>
+          <td>Public</td>
+          <td>Registers user with salted bcrypt password hash.</td>
+          <td><code>201 Created</code></td>
+        </tr>
+        <tr>
+          <td><code>POST</code></td>
+          <td><code>/api/auth/login</code></td>
+          <td>Public</td>
+          <td>Verifies password and issues HMAC-SHA256 JWT token.</td>
+          <td><code>200 OK</code></td>
+        </tr>
+        <tr>
+          <td><code>GET</code></td>
+          <td><code>/api/auth/profile</code></td>
+          <td><span class="badge badge-co">JWT Bearer</span></td>
+          <td>Returns authenticated user credentials payload.</td>
+          <td><code>200 OK</code></td>
+        </tr>
+        <tr>
+          <td><code>GET</code></td>
+          <td><code>/api/products</code></td>
+          <td>Public</td>
+          <td>Fetches catalog records with search, filter, and sort queries.</td>
+          <td><code>200 OK</code></td>
+        </tr>
+        <tr>
+          <td><code>GET</code></td>
+          <td><code>/api/products/stats</code></td>
+          <td>Public</td>
+          <td>Computes valuation, count, low-stock, and out-of-stock items.</td>
+          <td><code>200 OK</code></td>
+        </tr>
+        <tr>
+          <td><code>GET</code></td>
+          <td><code>/api/products/:id</code></td>
+          <td>Public</td>
+          <td>Retrieves single product record by primary key ID.</td>
+          <td><code>200 OK</code></td>
+        </tr>
+        <tr>
+          <td><code>POST</code></td>
+          <td><code>/api/products</code></td>
+          <td><span class="badge badge-co">Validated / Protected</span></td>
+          <td>Persists new product to database via Sequelize ORM.</td>
+          <td><code>201 Created</code></td>
+        </tr>
+        <tr>
+          <td><code>PUT</code></td>
+          <td><code>/api/products/:id</code></td>
+          <td><span class="badge badge-co">Validated / Protected</span></td>
+          <td>Updates existing database product attributes.</td>
+          <td><code>200 OK</code></td>
+        </tr>
+        <tr>
+          <td><code>DELETE</code></td>
+          <td><code>/api/products/:id</code></td>
+          <td><span class="badge badge-co">Protected</span></td>
+          <td>Permanently removes product record from database.</td>
+          <td><code>200 OK</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 12. TESTING & QUALITY ASSURANCE -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <h1 class="section-title">8. Testing and Quality Assurance Verification</h1>
+
+    <h2 class="sub-title">8.1 Testing Strategy & Methodology</h2>
+    <p>
+      Quality assurance was conducted across multiple layers of the testing pyramid, including unit syntax linting, automated integration script execution, API contract testing, and responsive layout validation.
+    </p>
+
+    <h2 class="sub-title">8.2 Master Test Verification Matrix</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Test ID</th>
+          <th>Target Program</th>
+          <th>Test Scenario</th>
+          <th>Expected Outcome</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>TC-P1-01</strong></td>
+          <td>Program 1 (Vanilla JS)</td>
+          <td>Input validation with invalid price ($0.00)</td>
+          <td>Submits blocked, inline error displayed</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-P1-02</strong></td>
+          <td>Program 1 (Vanilla JS)</td>
+          <td>Fetch API sample catalog retrieval</td>
+          <td>Renders 6 items, updates stats & live inspector</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-P2-01</strong></td>
+          <td>Program 2 (React)</td>
+          <td>SPA Navigation across all 5 routes</td>
+          <td>URL transitions without full-page reloads</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-P2-02</strong></td>
+          <td>Program 2 (React)</td>
+          <td>Production bundle build via Vite</td>
+          <td>Build completes with 0 errors (gzip: 60.6 KB)</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-P3-01</strong></td>
+          <td>Program 3 (Native Node)</td>
+          <td>Transform stream CSV generation</td>
+          <td>Pipes chunked CSV stream with attachment headers</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-P3-02</strong></td>
+          <td>Program 3 (Native Node)</td>
+          <td>EventEmitter stock alert notification</td>
+          <td>Fires alert and appends to <code>data/audit.log</code></td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-P4-01</strong></td>
+          <td>Program 4 (Express API)</td>
+          <td>Bcrypt password hashing on register</td>
+          <td>Stores 60-char salted hash; rejects plain text</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-P4-02</strong></td>
+          <td>Program 4 (Express API)</td>
+          <td>JWT Guard rejection on missing token</td>
+          <td>Returns 401 Unauthorized with error message</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-P5-01</strong></td>
+          <td>Program 5 (Full Stack)</td>
+          <td>Sequelize ORM CRUD persistence</td>
+          <td>Records commit to database file with timestamps</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-P5-02</strong></td>
+          <td>Program 5 (Full Stack)</td>
+          <td>React client error state recovery</td>
+          <td>Displays error banner and recovers on retry</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="sub-title">8.3 Security Audit Verification</h2>
+    <ul style="margin-left: 20px; font-size: 8.5pt; line-height: 1.6;">
+      <li><strong>Credential Protection:</strong> Zero plaintext passwords or production connection strings committed to Git. All secrets managed via <code>.env.example</code> templates.</li>
+      <li><strong>CORS Governance:</strong> Allowed origin headers explicitly constrained to authorized client origins.</li>
+      <li><strong>SQL Injection Immunity:</strong> All database queries executed via parameterized Sequelize ORM methods, preventing SQL injection vulnerabilities.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 13. DEPLOYMENT DOCUMENTATION -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <h1 class="section-title">9. Cloud Deployment Documentation</h1>
+
+    <h2 class="sub-title">9.1 Frontend Deployment on Vercel</h2>
+    <p>
+      The React frontend is architected for continuous deployment on the <strong>Vercel Edge Platform</strong>. Vercel automatically detects the Vite configuration and builds static assets into the <code>dist/</code> directory.
+    </p>
+    <p><strong>Configuration File (<code>frontend/vercel.json</code>):</strong></p>
+    <pre class="code-block"><code>{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}</code></pre>
+
+    <h2 class="sub-title">9.2 Backend & PostgreSQL Deployment on Render</h2>
+    <p>
+      The Express backend and managed PostgreSQL database are deployed via an Infrastructure-as-Code (IaC) blueprint using <strong>Render</strong>.
+    </p>
+    <p><strong>Deployment Manifest (<code>backend/render.yaml</code>):</strong></p>
+    <pre class="code-block"><code>services:
+  - type: web
+    name: apex-inventory-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: apex-inventory-postgres
+          property: connectionString
+
+databases:
+  - name: apex-inventory-postgres
+    plan: free
+    databaseName: apex_inventory
+    user: apex_user</code></pre>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- 14. CONCLUSION, REFERENCES & CO MAPPING -->
+  <!-- ========================================================== -->
+  <div class="page">
+    <div class="doc-header">
+      <span>Full Stack Development (FSD) &bull; CA3 Journal</span>
+      <span>Candidate: <strong>Yash Bhandari (Roll 08)</strong></span>
+    </div>
+
+    <h1 class="section-title">10. Conclusion & Future Scope</h1>
+    <p>
+      The <strong>Full Stack Development Continuous Assessment 3 (CA3)</strong> project successfully demonstrated the complete lifecycle of enterprise web application design, implementation, testing, and deployment.
+    </p>
+    <p>
+      Starting from low-level DOM events and Vanilla JS Fetch pipelines in Program 1, advancing to component hierarchies in React 18 (Program 2), core streaming services in Node.js (Program 3), secured RESTful APIs with JWT and bcrypt (Program 4), and culminating in full-stack relational persistence with Sequelize ORM (Program 5), each program achieved 100% test pass rates and strict adherence to architectural best practices.
+    </p>
+
+    <h2 class="sub-title">11. Course Outcome (CO) Attainment Mapping</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Course Outcome</th>
+          <th>Competency Statement</th>
+          <th>Associated Program</th>
+          <th>Attainment Evidence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>CO1, CO2</strong></td>
+          <td>Master client-side markup, styling, DOM scripting, and asynchronous network calls.</td>
+          <td><strong>Program 1</strong></td>
+          <td>Vanilla JS DOM manipulation, input validation, live Fetch API inspector.</td>
+        </tr>
+        <tr>
+          <td><strong>CO3</strong></td>
+          <td>Build interactive Single Page Applications using modern component frameworks.</td>
+          <td><strong>Program 2</strong></td>
+          <td>React 18 functional components, hooks, declarative React Router v6 navigation.</td>
+        </tr>
+        <tr>
+          <td><strong>CO4</strong></td>
+          <td>Develop server-side applications using Node.js core modules, streams, and event architecture.</td>
+          <td><strong>Program 3</strong></td>
+          <td>Pure Node.js HTTP server, <code>fs/promises</code>, <code>EventEmitter</code> audit logging, <code>Transform Stream</code> CSV export.</td>
+        </tr>
+        <tr>
+          <td><strong>CO5</strong></td>
+          <td>Design secure RESTful APIs with custom middleware, password hashing, and token authentication.</td>
+          <td><strong>Program 4</strong></td>
+          <td>Express CRUD, request logger, validator, bcrypt salted hashes, stateless JWT auth guard.</td>
+        </tr>
+        <tr>
+          <td><strong>CO6</strong></td>
+          <td>Integrate full stack multi-tier systems with relational database ORMs and cloud deployment.</td>
+          <td><strong>Program 5</strong></td>
+          <td>React client integrated with Express backend, Sequelize ORM persistence, Vercel & Render configs.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="sub-title">12. References</h2>
+    <ol style="margin-left: 20px; font-size: 8.5pt; line-height: 1.6;">
+      <li>MDN Web Docs: <em>Asynchronous JavaScript, Fetch API, and DOM Manipulation</em>, Mozilla Developer Network, 2026.</li>
+      <li>React Core Team: <em>React 18 Documentation – Functional Components & Hooks</em>, https://react.dev.</li>
+      <li>Node.js Foundation: <em>Node.js Core Documentation: HTTP, File System, Streams & Events</em>, https://nodejs.org.</li>
+      <li>Express.js Authors: <em>Express Framework: Routing, Middleware, and Security Practices</em>, https://expressjs.com.</li>
+      <li>Sequelize Community: <em>Sequelize v6 ORM: PostgreSQL & SQLite Modeling Guide</em>, https://sequelize.org.</li>
+    </ol>
+  </div>
+
+</body>
+</html>

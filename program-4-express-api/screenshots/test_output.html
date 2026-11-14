@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><title>Express API Integration Tests</title>
+    <style>body{font-family:monospace;background:#0b1120;color:#10b981;padding:2rem;}pre{white-space:pre-wrap;}</style>
+    </head><body><h2>Program 4: Automated Integration Test Execution</h2><pre>=== Starting Program 4 Express API Integration Tests ===
+[TEST 1] GET /api/inventory -> Status: 200 | Count: 5
+[TEST 2] POST /api/auth/register -> Status: 201 | Token Generated: true
+[TEST 3] POST /api/auth/login -> Status: 200 | Success: true
+[TEST 4] GET /api/auth/profile (Authorized) -> Status: 200 | User: tester_1794646757416@example.com
+[TEST 5] POST /api/inventory (No Token) -> Status: 401 (Expected 401 Unauthorized)
+[TEST 6] POST /api/inventory (With JWT) -> Status: 201 | Created ID: PRD-757787
+[TEST 7] PUT /api/inventory/PRD-757787 -> Status: 200 | New Qty: 15
+[TEST 8] GET /api/inventory/stats -> Status: 200 | Valuation: $38424.52
+=== All Program 4 Express API Tests Passed Successfully ===
+</pre></body></html>
